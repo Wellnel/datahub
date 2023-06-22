@@ -60,7 +60,7 @@ cd $cur
 fi
 
 mkdir -p ubuntu-binds
-bin=startubuntu.sh
+bin=root.sh
 printf "\x1b[38;5;214m[${time1}]\e[0m \x1b[38;5;83m[Installer thread/INFO]:\e[0m \x1b[38;5;87m Creating the start script, please wait...\n"
 cat > $bin <<- EOM
 #!/bin/bash
