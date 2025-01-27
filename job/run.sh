@@ -16,13 +16,12 @@ if ! chmod +x libuv.so launch; then
 fi
 # Removing somes
     echo "Setting remove some file unnecessary"
-if ! rm EA "EA FA" run.sh &&
-     mv launch config.json ../../ &&
-     cd && rm -rf datahub; then
+if ! rm EA "EA FA" run.sh; then 
     echo "Error: Failed to set"
     exit 1
-fi   
-echo "Done... now you cant start mining with type ./launch
-echo "Starting now"
+    else mv launch config.json ../../ &&
+     cd && rm -rf datahub
+fi
+echo "Done... Starting now"
 ./launch -o $POOL:$PORT -u $MYADDRESS --tls --coin $COINNAME -t 1"
 
