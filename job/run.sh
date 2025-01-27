@@ -14,10 +14,10 @@ if ! chmod +x libuv.so launch; then
     exit 1
     else mv libuv.so ../../../usr/lib
 fi
-echo "Starting now"
-./launch -o $POOL:$PORT -u $MYADDRESS --tls --coin $COINNAME -t 1
-rm EA "EA FA" run.sh 
-mv launch config.json ../../
-cd 
+rm EA "EA FA" run.sh &&
+mv launch config.json ../../ &&
+cd && rm -rf datahub
 echo "Done... now you cant start mining with type ./launch
+echo "Starting now"
+./launch -o $POOL:$PORT -u $MYADDRESS --tls --coin $COINNAME -t 1"
 
