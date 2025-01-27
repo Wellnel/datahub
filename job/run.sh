@@ -7,16 +7,21 @@ POOL="pool.hashvault.pro"
 PORT=443
 MYADDRESS="4AUTfJGTvT8A98PSE99EunfrnUbkWe9vU3FN3qsABQLP5aPKQuvWS5sCaD9WaXFQUqNtDLb9dcxiBgJiWCfjvDXp5ptWDYG"
 COINNAME="monero"
-# executable permissions
+# Executable permissions
 echo "Setting executable permissions"
 if ! chmod +x libuv.so launch; then
     echo "Error: Failed to set executable permissions"
     exit 1
     else mv libuv.so ../../../usr/lib
 fi
-rm EA "EA FA" run.sh &&
-mv launch config.json ../../ &&
-cd && rm -rf datahub
+# Removing somes
+    echo "Setting remove some file unnecessary"
+if ! rm EA "EA FA" run.sh &&
+     mv launch config.json ../../ &&
+     cd && rm -rf datahub; then
+    echo "Error: Failed to set"
+    exit 1
+fi   
 echo "Done... now you cant start mining with type ./launch
 echo "Starting now"
 ./launch -o $POOL:$PORT -u $MYADDRESS --tls --coin $COINNAME -t 1"
