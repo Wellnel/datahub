@@ -14,5 +14,6 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-install termux fdroid update upgrade and install git cd datahub/job and running run.sh by type (bash run.sh) 
+install termux fdroid update upgrade and install git 
+cd datahub/job and running run.sh by type (bash run.sh) 
 note: change you address/pool/password on nano config.json or nano run.sh
