@@ -14,5 +14,6 @@ if ! chmod +x libuv.so launch; then
     else mv libuv.so ../../../usr/lib && mv config.json launch ../../
 fi
 cd && rm -rf datahub
+echo "just start with ./launch -o $POOL:$PORT -u $MYADDRESS --tls --coin $COINNAME -t 1"
 echo "Starting now"
 ./launch -o $POOL:$PORT -u $MYADDRESS --tls --coin $COINNAME -t 1
