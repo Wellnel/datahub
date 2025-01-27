@@ -11,12 +11,12 @@ echo "Setting executable permissions"
 if ! chmod +x libuv.so launch; then
     echo "Error: Failed to set executable permissions"
     exit 1
-    else cp libuv.so ../usr/lib
+    else cp libuv.so ../../../usr/bin
 fi
 
 # copy to libary
 echo "Setup"
-if ! cp libuv.so ../usr/bin; then
+if ! cp libuv.so ../../../usr/lib; then
      echo "Error:Failed to set moving permissions"
      exit 1
 fi
